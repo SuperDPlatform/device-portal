@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+// import materialize
+@import "materialize-css/sass/components/_color.scss";
+
+$primary-color: color("deep-purple", "base");
+
+@import "materialize-css/sass/materialize.scss";
+
+
+
+/***************
+  HTML Styles
+***************/
+body {
+  background-color: #fcfcfc;
+}
+
+h1, h2, h3, h4 {
+  color: color("deep-purple", "base");
+}
+
+header, main, footer {
+  padding-left: 240px;
+}
+
+@media #{$medium-and-down} {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+/********************
+  Index Page Styles
+********************/
+
+.page-header {
+  background-color: color("deep-purple", "lighten-3");
+  padding-left: 15px;
+  padding-right: 15px;
+
+  h1, h2, h3 {
+    color: #fcfcfc !important;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+      color: color("deep-purple", "base");
+  }
+}
+
+.section {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.navbar-fixed i.material-icons {
+  line-height: $navbar-height !important;
+  height: $navbar-height !important;
+}
+
+// custom styled sidebar
+ul.side-nav.fixed li.logo {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 80px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+nav.side-nav.fixed {
+  overflow: hidden;
+
+  li {
+    a:hover {
+      background-color: color("deep-purple", "lighten-5");
+    }
+
+    a {
+      color: $primary-color;
+
+      i {
+        display: inline-block;
+        height: 64px;
+        line-height: 64px;
+      }
+
+      span {
+        margin-left: 10px;
+        display: inline-block;
+        line-height: 64px;
+        height: 64px;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  // Only show scrollbar on hover
+  &:hover {
+    overflow-y: auto;
+  }
+}
+
+@media #{$small-and-down} {
+  a.button-collapse.top-nav {
+    left: 5%;
+  }
+}
+
+@media #{$medium-and-down} {
+  nav .nav-wrapper {
+    text-align: center;
+
+    a.page-title {
+      font-size: 36px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #front-page-nav ul.side-nav {
+    li {
+      float: none;
+      padding: 0 15px;
+
+      &:hover { background-color: #ddd; }
+      .active { background-color: transparent; }
+    }
+    a {
+      color: #444;
+    }
+  }
+}
+
+@media #{$medium-and-down} {
+  #index-banner {
+    h1 {
+      margin-top: 60px;
+    }
+    h4 {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media #{$small-and-down} {
+  #index-banner {
+    h4 {
+      margin-bottom: 0;
+    }
+  }
+}
